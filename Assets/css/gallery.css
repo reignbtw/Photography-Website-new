@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Taviraj:wght@300;400;500;600;700&display=swap');
+
+:root{
+  --white: white;
+  --dark: #212324;
+  --darkGrey: #36393B;
+  --lightGrey: #727679;
+  --background: #F6F5F1;
+  --textColor: #967F79; 
+  --lightGreen: #22AAA1;
+  --darkGreen: #1d8881;
+  --transition: all 0.5s ease;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Taviraj', sans-serif;
+}
+
+.gallery-container {
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.gallery-container .gallery-heading {
+    width: 50%;
+    padding-bottom: 50px;
+}
+
+.gallery-container .gallery-heading h3 {
+    font-size: 3em;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-weight: 100;
+    border-bottom: 3px solid var(--textColor);
+}
+.gallery-container .gallery-heading h3 span {
+    font-weight: bolder;
+}
+
+.gallery-container .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.gallery-container .box .dream {
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+}
+
+.gallery-container .box .dream img {
+    width: 100%;
+    padding-bottom: 15px;
+    border-radius: 5px;
+}
+
+.gallery-container .btn {
+    margin: 40px 0 70px 0;
+    background: var(--textColor);
+    padding: 15px 40px;
+    border-radius: 5px;
+}
+
+.gallery-container .btn a {
+    color: var(--background);
+    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: bolder;
+    letter-spacing: 3px;
+}
+
+@media only screen and (max-width: 768px){
+    .gallery-container .box {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .gallery-container .box .dream {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 595px){
+    .gallery-container .gallery-heading {
+        width: 100%;
+    }
+    
+    .gallery-container .gallery-heading h3 {
+        font-size: 1em;
+    }
+}

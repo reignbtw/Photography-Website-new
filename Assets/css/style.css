@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Taviraj:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --white: white;
+    --dark: #212324;
+    --lightGrey: #727679;
+    --background: #F6F5F1;
+    --textColor: #967F79; 
+    --transition: all 0.5s ease;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Taviraj', sans-serif;
+    color: var(--textColor);
+}
+
+.main {
+    background-color: var(--background);
+    margin: 0;
+    padding: auto;
+}
+
+/*  Navigation Tool Bar */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: var(--dark);
+    font-family: 'Taviraj', sans-serif;
+}
+
+.logo {
+    color: var(--background);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--textColor);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Navigation Tool Bar End */
+
+/* Mobile Nav Tool Bar Start */
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color : black;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 60%;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: fixed;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: 0.5s ease-in;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .nav-active {
+        transform: translateX(0%);
+    }
+}
+
+/* Mobile Nav Tool Bar End */
+
+/* Animation Start */
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transfrom: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+         
+    }
+    
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+
+}
+
+.toggle .line2 {
+    opacity: 0;
+    
+}
+
+.toggle .line3 {
+    transform: rotate(45deg)translate(-5px,-6px);
+    
+}
+
+  .slider {
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+  
+  .slides {
+    width: 500%;
+    height: 500px;
+    display: flex;
+    
+  }
+  
+  .slides input{
+    display: none;
+  }
+  
+  .slide {
+    width: 20%;
+    transition: 2s;
+  }
+  
+  .slide img {
+    width: 800px;
+    height: 500px;
+  }
+
+/* Instagram */
+/* .section-two{
+    margin: 40px 0;
+}
+
+.section-two h2{
+    text-align: center;
+    font-size: 40px;
+}
+
+.section-two span{
+    color: var(--darkGrey);
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.insta-imgs{
+    padding: 50px 50px 50px 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+i:last-of-type{
+    background: transparent;
+    color: var(--background);
+}
+
+.insta-imgs > div{
+    position: relative;
+}
+
+.icon-overlay{
+    position: absolute;
+    color: var(--background);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    background: rgba(150, 127, 121, 0.5);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.insta-imgs > div:hover .icon-overlay{
+    opacity: 1;
+}
+
+.container{
+    width: 90vw;
+    margin: 0 auto;
+} */
+
+/* Footer */
+
+.footer{
+    color: var(--textColor);
+    background-color: var(--background);
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-container > div{
+    margin: 40px 0;
+}
+
+.footer-container h2{
+    color: var(--lightGreen);
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: 7px;
+}
+
+.footer-container p{
+    opacity: 0.7;
+}
+
+.footer > p{
+    text-align: center;
+    font-size: 14px;
+}
