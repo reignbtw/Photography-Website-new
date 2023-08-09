@@ -56,3 +56,33 @@
     margin-bottom: 45px;
 }
 
+@media screen and (max-width: 768px) {
+    .about-text h1{
+        font-size: 40px;
+    }
+    .about-text p{
+        font-size: 12px;
+    }
+    .about img{
+        height: auto;
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .about-text h1{
+        position: fixed;
+        margin-left: 120px;
+        font-size: 30px;
+    }
+    .about-text p{
+        margin-top: 500px;
+        position: relative;
+        font-size: 12px;
+    }
+    .about img{
+        position: absolute;
+        width: 250px;
+        margin-bottom: 600px;
+    }
+}

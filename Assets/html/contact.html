@@ -42,45 +42,19 @@
 
 <!-- Main -->
 <div class="form-container">
-    <form action="mailto:phelms1999@gmail.com" method="post" enctype="text/plain">
+    <form method="post" action="../php/action_page.php">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required>
 
-        <label for="fname">First Name *</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your Name...">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+        <br>
+        <label for="subject">Comments</label>
+        <textarea name="message" id="message" required></textarea>
 
-        <label for="lname">Last Name *</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your Last Name...">
+        <br>
 
-        <label for="email">Email Address *</label>
-        <input type="text" id="email" name="email" placeholder="Email Address">
-
-        <label for="session">What Type of Session Are You Looking For? *</label>
-        <select id="session" name="session">
-            <option value="creative">Creative Portraits</option>
-            <option value="couples">Couples</option>
-            <option value="family">Family</option>
-            <option value="school">PROM/Graduation</option>
-            <option value="commercial">Commercial</option>
-            <option value="other">Other</option>
-        </select>
-
-        <label for="date">What Date(s) and Time(s) Would Work Best For You? *</label>
-        <input type="text" id="date" name="dateandTime" placeholder="I'm available for a photoshoot on January 1st and 2nd in the morning.">
-
-        <label for="location">Where Would You Like To Have The Photoshoot? *</label>
-        <input type="text" id="location" name="location" placeholder="I would like to have my photoshoot  at the Golden Gate Bridge in San Francisco.">
-
-        <label for="heardOfMe">How Did You Hear About Me? *</label>
-        <select id="heardOfMe" name="heardOfMe">
-            <option value="insta">Instagram</option>
-            <option value="facebook">Facebook</option>
-            <option value="google">Google</option>
-            <option value="other">Other</option>
-        </select>
-
-        <label for="questions">Anything You'd Like To Say Before Our Shoot? (Questions, Comments, Concerns) *</label>
-        <textarea id="questions" name="questions" style="height:200px"></textarea>
-
-        <input type="submit" value="Send">
+        <button>Submit</button>
     </form>
 </div>
 
